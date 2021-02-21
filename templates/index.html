@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="main_h1">Enter any Twitter username</h1>
+    <form action="/register" method="post">
+        <input class='input-form' name="nickname" placeholder="@Twitter nickname" type="text"/>
+        <button type="submit", value='search'>search</button>
+    </form>
+{% endblock content %}
