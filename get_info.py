@@ -25,7 +25,7 @@ def search_user(nickname: str):
     responce = requests.get(search_url, headers=search_headers, params=search_params)
     json_responce = responce.json()
 
-    if 'error' in json_responce:
+    if 'error' in json_responce or 'errors' in json_responce:
         return {}
     
     info = {}
@@ -70,5 +70,5 @@ def main(nickname: str):
 if __name__ == '__main__':
     usr = '@BarackObama'
     usr2 = '@Ostap36606289'
-    usr3 = '@hello'
+    usr3 = '././.'
     print(main(usr3))
